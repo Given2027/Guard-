@@ -47,25 +47,25 @@
                 <legend><b>Get the Financial Support You Need</b></legend>
                 <form action="/path/to/your/login/endpoint" method="post">
                     <div class="form-group">
-                        <label for="username">Username:</label>
-                        <input class="user-name" id="username" type="text" placeholder="e.g) Given" required>
+                    <label for="username">Username:</label>
+                    <input class="user-name" id="username" type="text" placeholder="e.g) Given" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input class="user-password" id="password" type="password" placeholder="Enter your password" required>
+                </div>
+                <div class="Terms-C">
+                    <div>
+                        <input type="checkbox" id="terms" name="terms" required>
+                        I agree to the 
+                        <a href="terms.html" target="_blank">Terms and Conditions</a> and 
+                        <a href="privacy.html" target="_blank">Privacy Policy</a>.
                     </div>
-                    <div class="form-group">
-                        <label for="password">Password:</label>
-                        <input class="user-password" id="password" type="password" placeholder="Enter your password" required>
+                    <div class="buttons">
+                        <button class="button" type="button" onclick="window.location.href='signUp.html'">Sign Up</button>
+                        <button class="button" type="submit">Sign In</button> 
                     </div>
-                    <div class="Terms-C">
-                        <div>
-                            <input type="checkbox" id="terms" name="terms" required>
-                            I agree to the 
-                            <a href="terms.html" target="_blank">Terms and Conditions</a> and 
-                            <a href="privacy.html" target="_blank">Privacy Policy</a>.
-                        </div>
-                        <div class="buttons">
-                            <button class="button" type="button" onclick="window.location.href='signUp.html'">Sign Up</button>
-                            <button class="button" type="submit">Sign In</button>
-                        </div>
-                    </div>
+                </div>
                 </form>
             </fieldset>
         </div>
