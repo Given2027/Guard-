@@ -226,8 +226,7 @@ main {
     background: linear-gradient(45deg, rgb(246, 241, 179), rgb(43, 42, 12));
     border: 1px solid #ddd;
     border-radius: 4px;
-    padding: 5px;
-    max-width: 70%; 
+    padding: 5px; 
     color: #040404;
     display: flex;
     flex-direction: column;
