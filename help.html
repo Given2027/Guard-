@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Guardian Loans - Help</title>
+    <style>
+        /* Basic styling for modal */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover, .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button type="menu-icon" class="navbar-toggle" id="menu-icon" onclick="toggleMenu()">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        
+        <div class="top">
+            <h1 class="top-text">Guardian Lenders</h1>
+        </div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="signIn.html">Log In</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li><a href="index.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <fieldset class="content-status">
+            <h2>Frequently Asked Questions</h2>
+            <p>Here you can find answers to commonly asked questions:</p>
+            <ul>
+                <li><b>How do I apply for a loan?</b> You can apply for a loan through our online application form.</li>
+                <li><b>What documents do I need?</b> You will need to provide identification and proof of income.</li>
+                <li><b>How long does the loan process take?</b> Most applications are processed within 24 hours.</li>
+                <li><b>Can I pay off my loan early?</b> Yes, there are no prepayment penalties.</li>
+                <li><b>What is the interest rate?</b> Our interest rates vary based on the loan type and applicant's credit history.</li>
+                <li><b>Can I get a loan with bad credit?</b> We offer loans to individuals with all types of credit.</li>
+                <li><b>What if I need assistance with my loan?</b> You can contact our support team or visit our Help section.</li>
+            </ul>
+            
+            <button id="help-button" class="button-help" onclick="openModal()">Help</button>
+        </fieldset>
+        <br>
+        
+        <!-- Modal for Help -->
+        <div id="helpModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Need Assistance?</h2>
+                <p>If you have further questions or need immediate assistance, please reach out to our customer support team:</p>
+                <p><b>Email:</b> support@guardianlenders.com</p>
+                <p><b>Phone:</b> 1-800-555-LOAN</p>
+                <p>We're here to help you!</p>
+            </div>
+        </div>
+        
+    </main>
+
+    <!-- <footer class="home">
+        <div class="footer-content">
+            <div class="social-media">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="footer-text">
+                <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer> -->
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Guardian Loans - Financial Request</title>
+    <style>
+    </style>
+    <script>
+        
+    </script>
+</head>
+
+<body>
+    <header>
+        <button type="button" class="navbar-toggle" id="menu-icon" onclick="toggleMenu()">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        
+        <div class="top">
+            <h1 class="top-text">Guardian Lenders</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="Bank-Details">
+        <div class="info-holder">
+            <legend>Financial Request Field</legend>
+            <form action="signup_endpoint" method="post">
+                
+                <div class="form-group-SignUp">
+                    <label for="bankStatementValue">Bank Statement Value:</label>
+                    <input class="TextBox-SignUp" type="number" id="bankStatementValue" name="bankStatementValue" placeholder="Bank's evaluated amount" required readonly>
+                </div>
+                
+                <div class="form-group-SignUp">
+                    <label for="bankName">Welcome</label>
+                    <select class="TextBox-SignUp" id="employmentStatus" name="employmentStatus" required>
+                        <option value="employed">Capitec</option>
+                        <option value="unemployed">ABSA</option>
+                        <option value="self-employed">FNB</option>
+                        <option value="student">TymeBank</option>
+                        <option value="retired">African Bank</option>
+                        <option value="freelancer">Nedbank</option>
+                    </select>
+                </div>
+                
+                <br>
+
+                <div>
+                    <fieldset >
+                    <legend>Required Documents</legend>
+                    <div class="form-group-SignUp">
+                        <div class="document-status">
+                            <label for="bankStatements">Bank Statements:</label>
+                            <div class="status-indicator">
+                                <span class="status-label">Verified</span>
+                                <div class="progress-line verified"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group-SignUp">
+                        <div class="document-status">
+                            <label for="idProof">ID/Passport:</label>
+                            <div class="status-indicator">
+                                <span class="status-label">Not Verified</span>
+                                <div class="progress-line not-verified"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group-SignUp">
+                        <div class="document-status">
+                            <label for="proofOfAddress">Proof of Address:</label>
+                            <div class="status-indicator">
+                                <span class="status-label">Verified</span>
+                                <div class="progress-line verified"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p>Here is your outstanding balance:</p>
+                    <table class="Balance-Table">
+                        <tr class="balance-column">
+                            <th class="balance-row">Loan</th>
+                            <th class="balance-row">Initial Amount</th>
+                            <th class="balance-row">Interests</th>
+                            <th class="balance-row">Date Approved</th>
+                            <th class="balance-row">Status</th>
+                        </tr>
+                        <tr>
+                            <td class="balance-row">Loan 1</td>
+                            <td class="balance-row">200</td>
+                            <td class="balance-row">80</td>
+                            <td class="balance-row">18/02/2024</td>
+                            <td class="balance-row">Outstanding</td>
+                        </tr>
+                        <tr>
+                            <td class="balance-row">Loan 2</td>
+                            <td class="balance-row">1000</td>
+                            <td class="balance-row">400</td>
+                            <td class="balance-row">18/08/2024</td>
+                            <td class="balance-row">Complete</td>
+                        </tr>
+                        <tr>
+                            <td class="balance-row">Loan 3</td>
+                            <td class="balance-row">800</td>
+                            <td class="balance-row">320</td>
+                            <td class="balance-row">18/02/2024</td>
+                            <td class="balance-row">Complete</td>
+                        </tr>
+                        <tr>
+                            <td class="balance-row">Loan 4</td>
+                            <td class="balance-row">200</td>
+                            <td class="balance-row">80</td>
+                            <td class="balance-row">18/02/2024</td>
+                            <td class="balance-row">Complete</td>
+                        </tr>
+                        <tr>
+                            <td class="balance-row">Loan 5</td>
+                            <td class="balance-row">200</td>
+                            <td class="balance-row">80</td>
+                            <td class="balance-row">18/02/2024</td>
+                            <td class="balance-row">Complete</td>
+                        </tr>
+                    </table>
+                </fieldset>
+                </div>
+                
+
+                <fieldset>
+                    <legend>Loan Information</legend>
+                    <div class="form-group">
+                        <label for="requested-amount">Amount to request:</label>
+                        <input class="TextBox-SignUp" type="text" id="requested-amount" name="amount-requested" oninput="calculateReturn(); checkQualification();" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="debitDate">Debit date:</label>
+                        <input class="Date-taken" type="date" id="debitDate" name="debitDate" required>
+                    </div>
+                    
+                    <div class="form-group" style="margin-top: 10px;">
+                        <label>Repayment Period:</label><br>
+                        <label><input type="radio" name="repayment-period" value="1" onclick="calculateReturn();" required> 1 Month</label><br>
+                        <label><input type="radio" name="repayment-period" value="2" onclick="calculateReturn();"> 2 Months</label><br>
+                        <label><input type="radio" name="repayment-period" value="3" onclick="calculateReturn();"> 3 Months</label>
+                    </div>
+
+                    <div>
+                        <hr>
+                        <p>This is your monthly repayment amount</p>
+                        <hr>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="amount-to-be-returned">Monthly Debit Amount:</label>
+                        <input class="debit-amount" type="text" id="amount-to-be-returned" name="amount-to-be-returned" required readonly>
+                    </div>
+    
+                    <div id="qualify-status" class="amount-return"></div>
+                    <div id="feedback" class="feedback"></div>
+                </fieldset>
+                <br>
+
+                <div class="form-group-SignUp terms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    I agree to the 
+                    <a href="terms.html" target="_blank">Terms and Conditions</a> and <a href="privacy.html" target="_blank">Privacy Policy</a>.
+                </div>
+
+                <div class="buttons">
+                    <button type="submit" onclick="window.location.href='status.html'">Continue</button>
+                    <button type="button" onclick="window.location.href='index.html'">Log out</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="home">
+        <div class="footer-content">
+            <div class="social-media">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="footer-text">
+                <p>© 2023 Your Company Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

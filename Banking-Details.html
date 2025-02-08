@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Guardian Loans - Financial Request</title>
+    <style>
+        
+    </style>
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+    <header>
+
+        <button type="menu-icon" class="navbar-toggle" id="menu-icon" onclick="toggleMenu()">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        
+        <div class="top">
+            <h1 class="top-text">Guardian Lenders</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li><a href="signUp.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="Bank-Details">
+        <div class="info-holder">
+            <legend>Financial Request Field</legend>
+            <form action="signup_endpoint" method="post">
+                
+                <div class="form-group-SignUp">
+                    <label for="bankName">Bank Name:</label>
+                    <select class="TextBox-SignUp" id="employmentStatus" name="employmentStatus" required>
+                        <option value="employed">Capitec</option>
+                        <option value="unemployed">ABSA</option>
+                        <option value="self-employed">FNB</option>
+                        <option value="student">TymeBank</option>
+                        <option value="retired">African Bank</option>
+                        <option value="freelancer">Nedbank</option>
+                    </select>
+                </div>
+                
+                <div class="form-group-SignUp">
+                    <label for="accountNumber">Bank Account Number:</label>
+                    <input class="TextBox-SignUp" type="text" id="accountNumber" name="accountNumber" required>
+                </div>
+
+                <fieldset style="border: 1px solid #000000; border-radius: 8px; padding: 10px; margin-top: 20px;">
+                    <legend>Required Documents</legend>
+                    <p>Please upload the following documents:</p>
+                    <ul>
+                        <li>Bank Statements (last 3 months)</li>
+                        <li>Valid ID/Passport</li>
+                        <li>Proof of Address (utility bill, etc.)</li>
+                    </ul>
+                    <div class="form-group-SignUp">
+                        <label for="bankStatements">Upload Bank Statements:</label>
+                        <input class="TextBox-SignUp" type="file" id="bankStatements" name="bankStatements" accept=".pdf,.jpg,.png,.jpeg" required>
+                    </div>
+                    <div class="form-group-SignUp">
+                        <label for="idProof">Upload ID/Passport:</label>
+                        <input class="TextBox-SignUp" type="file" id="idProof" name="idProof" accept=".pdf,.jpg,.png,.jpeg" required>
+                    </div>
+                    <div class="form-group-SignUp">
+                        <label for="proofOfAddress">Upload Proof of Address:</label>
+                        <input class="TextBox-SignUp" type="file" id="proofOfAddress" name="proofOfAddress" accept=".pdf,.jpg,.png,.jpeg" required>
+                    </div>
+                </fieldset>
+
+                <fieldset style="border: 1px solid #000000; border-radius: 8px; padding: 10px; margin-top: 20px;">
+                    <legend>Credit Card Information</legend>
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number:</label>
+                        <input class="TextBox-SignUp" type="text" id="cardNumber" name="cardNumber" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cardholderName">Cardholder Name:</label>
+                        <input class="TextBox-SignUp" type="text" id="cardholderName" name="cardholderName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="expirationDate">Expiration Date (MM/YY):</label>
+                        <input class="TextBox-SignUp" type="text" id="expirationDate" name="expirationDate" placeholder="MM/YY" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cvv">CVV:</label>
+                        <input class="TextBox-SignUp" type="text" id="cvv" name="cvv" required>
+                    </div>
+                </fieldset>
+
+                <div class="form-group-SignUp terms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    I agree to the 
+                    <a href="terms.html" target="_blank">Terms and Conditions</a> and <a href="privacy.html" target="_blank">Privacy Policy</a>.
+                </div>
+
+                <div class="buttons">
+                    <button onclick="window.location.href='Apply-loan.html'" type="submit">Continue</button>
+                    <button type="button" onclick="window.location.href='index.html'">Log out</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="home">
+        <div class="footer-content">
+            <div class="social-media">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="footer-text">
+                <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

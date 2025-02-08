@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Administrator Loan Management</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="top">
+            <h1 class="top-text">Guardian Lenders - Administrator</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="Bank-Details">
+        <fieldset class="content-status
+        ">
+            <div class="info-holder-SignUP">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search by name..." oninput="filterApplicants()">
+                </div>
+                <h2>Applicants List</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Outstanding Amount</th>
+                            <th>Requested Amount</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="applicantsList"></tbody>
+                </table>
+    
+                <fieldset>
+                    <div>
+                        <h3>Applicant Details:</h3>
+                        <div id="statusText" class="status-text"></div>
+                        <div id="outstandingBalance" class="outstanding-balance"></div>
+                        <div id="historyText"></div> 
+                        <div id="returnDateDisplay"></div>
+                        <div id="nextPaymentDueDisplay"></div> 
+                        <div id="paymentCountdownText" class="countdown"></div> 
+                        <div id="countdownText" class="countdown"></div> 
+                    </div>
+                </fieldset>
+            </div>
+        </fieldset>
+    </main>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Guardian Loans - Home</title>
+    <meta name="description" content="Guardian Loans offers competitive personal loans to help you manage your finances.">
+    <meta name="keywords" content="loans, personal loans, financial services, Guardian Loans">
+    <meta name="author" content="Guardian Loans Team">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<script src="script.js"></script>
+
+<body>
+    <header>
+        <button type="button" class="navbar-toggle" id="menu-icon" onclick="toggleMenu()">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <div class="top">
+            <h1 class="top-text">Guardian Lenders</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <div class="info-holder-home">
+            <fieldset>
+                <legend>Sign Up</legend>
+                <form action="signup_endpoint" method="post">
+                    <!-- Form fields as specified in your original code -->
+                    <div class="form-group-SignUp">
+                        <label for="firstName">First Name:</label>
+                        <input class="TextBox-SignUp" type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group-SignUp">
+                        <label for="lastName">Last Name:</label>
+                        <input class="TextBox-SignUp" type="text" id="lastName" name="lastName" required>
+                    </div>
+                    <div class="form-group-SignUp">
+                        <label for="email">Email:</label>
+                        <input class="TextBox-SignUp" type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group-SignUp">
+                        <label for="phone">Phone Number:</label>
+                        <input class="TextBox-SignUp" type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group-SignUp">
+                        <label for="address">Address:</label>
+                        <input class="TextBox-SignUp" type="text" id="address" name="address" required>
+                    </div>
+                    <div class="form-group-SignUp">
+                        <label for="income">Monthly Income:</label>
+                        <input class="TextBox-SignUp" type="number" id="income" name="income" required>
+                    </div>
+                    <div class="form-group-SignUp">
+                        <label for="employmentStatus">Employment Status:</label>
+                        <select class="TextBox-SignUp" id="employmentStatus" name="employmentStatus" required>
+                            <option value="employed">Employed</option>
+                            <option value="unemployed">Unemployed</option>
+                            <option value="self-employed">Self-Employed</option>
+                            <option value="student">Student</option>
+                            <option value="retired">Retired</option>
+                            <option value="freelancer">Freelancer</option>
+                        </select>
+                    </div>
+                    <div class="form-group-SignUp">
+                        <label for="password">Password:</label>
+                        <input class="TextBox-SignUp" type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-group-SignUp">
+                        <label for="confirmPassword">Confirm Password:</label>
+                        <input class="TextBox-SignUp" type="password" id="confirmPassword" name="confirmPassword" required>
+                    </div>
+                    <div class="form-group-SignUp">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        I agree to the 
+                        <a href="terms.html" target="_blank">Terms and Conditions</a> and 
+                        <a href="privacy.html" target="_blank">Privacy Policy</a>. 
+                    </div>
+                    <div class="buttons">
+                        <button class="button" onclick="window.location.href='Apply-loan.html'" type="submit">Register</button>
+                        <button class="button" onclick="window.location.href='index.html'" type="button">Log out</button>
+                    </div>
+                </form>
+            </fieldset>
+
+            <!-- Applicant List Section -->
+            
+        </div>
+    </main>
+
+    <footer class="home">
+        <div class="footer-content">
+            <div class="social-media">
+                <a href="#"><span class="fab fa-facebook-f"></span> Facebook</a>
+                <a href="#"><span class="fab fa-twitter"></span> Twitter</a>
+                <a href="#"><span class="fab fa-instagram"></span> Instagram</a>
+                <a href="#"><span class="fab fa-linkedin-in"></span> LinkedIn</a>
+            </div>
+            <div class="footer-text">
+                <p>&copy; 2023 Guardian Loans. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+    </script>
+</body>
+</html>

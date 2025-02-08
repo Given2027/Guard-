@@ -1,0 +1,516 @@
+/* Reset some basic elements */
+:root {
+    --primary-color: #24a9e2;
+    --secondary-color: #007ee5;
+    --hover-background-color: rgba(255, 255, 255, 0.2);
+    --light-background: rgba(255, 255, 255, 0.9);
+    --footer-background: linear-gradient(45deg, rgb(246, 241, 179), rgb(43, 42, 12));
+    --text-color: #fffefe;
+}
+
+.Top-lines {
+    background-color: #007ee5;
+    height: 20px;
+    width: 30px;
+    z-index: inherit;
+    left: 100px;
+}
+
+.top-text {
+    margin: 0px;
+    font-size: 150%;
+    padding-top: 0%;
+    padding: 5px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    background: rgb(36, 36, 36);
+    background-size: 100%;            
+    background-position: center center; 
+    background-repeat: repeat;    
+}
+
+/* Other existing styles remain unchanged */
+h1, p, ul, li {
+    list-style: none; 
+}
+
+/* Header styles */
+header {
+    background: var(--footer-background);        
+    color: white;                 
+    padding: 20px 0;              
+    text-align: center;           
+    position: fixed;              
+    top: 0;                      
+    left: 0;                     
+    right: 0;                    
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s; 
+    padding: 10px;
+}
+
+button, html input[type="button"], 
+            input[type="reset"], 
+            input[type="submit"] {
+    cursor: pointer;
+}
+
+.navbar-inverse .navbar-toggle {
+    display: none;
+}
+
+.navbar-toggle {
+    display: none;
+}
+
+/* Top-three-lines */
+.Top-three-lines :hover {
+    background-color: #b1ae68;
+    border-color: #b4b4b4;
+    border: 1px;
+    position:inherit;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    background: black;
+    border: 2px solid beige;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu li {
+    cursor: pointer;
+}
+
+.menu li:hover {
+    background-color: #040404;
+}
+
+.Balance-Table {
+    margin: 10px; 
+    background: transparent;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    padding: 5px;
+    max-width: 100%; 
+    color: #040404;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    z-index: 500;
+    margin-left: 0px;
+}
+
+.balance-column {
+    border-style: outset;
+    border-color: #333;
+    font-size: 70%;
+    margin-left: 0px;
+}
+
+.balance-row {
+    height: 2px;
+    border-right: 2px solid black;
+    padding-inline: 8px;
+}
+
+.Date-taken {
+    width: 100px;
+}
+
+.debit-amount {
+    width: 400px;
+    border-radius: 4px;
+    padding: 3px;
+}
+
+/* Navigation styles */
+nav ul {
+    padding: 0;
+    text-align: center;
+    margin: 0px 0;
+}
+
+nav ul li { 
+    margin: 0px; 
+    display: inline-block;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+    padding: 5px 5px; 
+    border-radius: 4px; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--hover-background-color); 
+    text-decoration: underline;
+}
+
+/* Main container styles */
+main {
+    margin: 140px 0 20px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    padding: 20px;
+}
+
+/* Content Section Styles */
+#personal-loans {
+    background: var(--light-background); 
+    border-radius: 10px; 
+    padding: 20px; 
+    margin: 20px auto; 
+    max-width: 800px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+}
+
+.loan-info h2 {
+    font-size: 1.8em; 
+    color: var(--primary-color);
+    text-align: center; 
+}
+
+.loan-info p {
+    margin: 10px 0; 
+    font-size: 1.1em; 
+    color: #ffffff; 
+}
+
+.loan-info ul {
+    margin: 10px 0; 
+    padding-left: 20px; 
+}
+
+.loan-info li {
+    margin: 5px 0; 
+}
+
+/* Apply unique styles to the apply button */
+#personal-loans button {
+    background-color: var(--primary-color); 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    text-align: center; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    display: block; 
+    margin: 20px auto; 
+}
+
+#personal-loans button:hover {
+    background-color: var(--secondary-color); 
+}
+
+/* Info holder styles */
+.info-holder {
+    margin: auto; 
+    background: linear-gradient(45deg, rgb(246, 241, 179), rgb(43, 42, 12));
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    max-width: 70%; 
+    color: #040404;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    z-index: 500;
+}
+
+.info-holder-home {
+    margin: auto; 
+    background: linear-gradient(45deg, rgb(246, 241, 179), rgb(43, 42, 12));
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    max-width: 100%; 
+    color: #040404;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    z-index: 500;
+    
+    /* Animation properties */
+    animation: text-lines 2s ease-in-out infinite; /* Merged properties for clarity */
+    animation-fill-mode: forwards;
+}
+
+.required-docs {
+    background: #333;
+}
+
+.amount-return {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.about{
+    margin-top: 100px;
+    width: 95%;
+    margin-left: 20px;
+    color: #000000;
+}
+
+/* @keyframes text-lines {
+    0% {
+        top: 0px;
+        background: linear-gradient(45deg, gray, blue);
+    }
+
+    100% {
+        background: linear-gradient(45deg, blue, gray);
+    }
+} */
+
+fieldset {
+    border-radius: 5px;
+}
+
+.queries {
+    height: 20px;
+}
+
+.document-status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    margin-left: 20px; /* Space between label and status line */
+}
+
+.status-label {
+    margin-right: 10px; /* Space between label and line */
+}
+
+.progress-line {
+    flex-grow: 1; /* Allow the line to take up the remaining space */
+    height: 5px; /* Height of the progress line */
+    background-color: #e0e0e0; /* Default background color */
+    border-radius: 5px; /* Rounded edges for smooth appearance */
+}
+
+/* Colors for status verification */
+.progress-line.verified {
+    background-color: green; /* Indicate verified with green */
+}
+
+.progress-line.not-verified {
+    background-color: red; /* Indicate not verified with red */
+}
+
+/* Form-related styles */
+.form-group {
+    display: flex;
+    flex-direction: column; 
+    margin-top: 1%; 
+    width: 100%;
+    height: 30%;
+}
+
+.status-message {
+    font-size: 1.5em;
+    margin: 20px 0;
+    text-align: center;
+    color: #28a745; /* Green for approved */
+}
+
+.declined {
+    color: #dc3545; /* Red for declined */
+}
+
+.content-status {
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+    background: linear-gradient(45deg, rgb(246, 241, 179), rgb(43, 42, 12));;
+}
+
+.content {
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Bank-Details {
+    margin-top: 90px;
+}
+
+h2, p {
+    color: #000000;
+}
+
+.document {
+    margin: 10px 0;
+    color: green;
+}
+
+label {
+    display: block;
+    margin: 2px; 
+    text-align: left; 
+    font-size: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    padding: 1%; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 95%; 
+    box-sizing: border-box;
+    height: auto; 
+}
+
+/* Card info styles */
+.card-info {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.amount-return,
+.outstanding-balance {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.countdown {
+    font-size: 24px;
+    color: green;
+    font-weight: bold;
+}
+
+form {
+    position: relative;
+}
+
+legend {
+    border-width: 8px;
+    box-sizing: border-box;
+    font-size: 80%;
+    font-weight: bolder;
+}
+
+.Terms-C {
+    font-size: 90%;
+}
+
+.buttons {
+    display: flex;
+    gap: 3px; 
+}
+
+.buttons button {
+    background-color: blue;
+    color: rgb(255, 255, 255); 
+    border: none; 
+    padding: 5px; 
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    flex: 1; 
+    position: relative;
+    padding: 2%;
+    font-size: 70%;
+    margin: 0.5%;
+}
+
+.buttons button:hover {
+    background-color: var(--secondary-color); 
+}
+
+/* Improved Footer Styles */
+footer.home {
+    position: relative; 
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    text-align: center;
+    padding: 10px;
+    background: var(--footer-background);
+    color: white;
+}
+
+/* Social media links container */
+footer .social-media {
+    text-align: center;
+    margin-top: 15px; 
+    flex-direction: row;
+    justify-content: center; 
+}
+
+/* Social media link styling */
+footer .social-media a {
+    color: white; 
+    margin: 10px; 
+    text-decoration: none; 
+    transition: color 0.3s, transform 0.3s; 
+    font-size: 18px; 
+}
+
+/* Hover effect for social media links */
+footer .social-media a:hover {
+    color: #f0d95f; 
+    transform: scale(1.1); 
+}
+
+/* Optional footer text styling */
+footer .footer-text {
+    font-size: 14px; 
+    margin-top: 5px; 
+}
+
+/* Added a copyright notice */
+footer .footer-text p {
+    margin: 0; 
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    footer.home {
+        padding: 5px; 
+    }
+    
+    footer .social-media {
+        flex-direction: column; 
+    }
+
+    footer .social-media a {
+        margin: 5px 0; 
+        font-size: 16px; 
+    }
+}
