@@ -361,6 +361,8 @@ fieldset {
 
 .Bank-Details {
     margin-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h2, p {
