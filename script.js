@@ -16,6 +16,20 @@ document.addEventListener("DOMContentLoaded", () => {
         return div.innerHTML;
     }
 
+    function handleLogin(event) {
+            event.preventDefault(); // Prevent the default form submission
+            
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Check credentials
+            if (username === "Given" && password === "1234") {
+                window.location.href = "admin.html"; // Redirect to the admin page
+            } else {
+                alert("Invalid username or password."); // Show error message
+            }
+        }
+
     // Loan Applicants Data
     const applicants = [
         { name: "John Doe", outstandingPreviousAmount: 500, requestedAmount: 1000, history: ["Loan 1", "Loan 2"] },
