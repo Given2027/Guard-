@@ -16,19 +16,37 @@ document.addEventListener("DOMContentLoaded", () => {
         return div.innerHTML;
     }
 
-    function handleLogin(event) {
-            event.preventDefault(); // Prevent the default form submission
-            
-            const username = document.getElementById("username").value;
-            const password = document.getElementById("password").value;
+    let usersDatabase = [
+        { username: 'Given', password: '1234' }
+    ];
 
-            // Check credentials
-            if (username === "Given" && password === "1234") {
-                window.location.href = "admin.html"; // Redirect to the admin page
+    // Handle Login Form Submission
+    const loginForm = document.querySelector('form');
+    
+    loginForm.addEventListener('submit', (event) => {
+        event.preventDefault(); // Prevent the form from submitting the traditional way
+
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        // Check if credentials are correct
+        if (username === 'Given' && password === '1234') {
+            window.location.href = 'admin.html'; // Redirect to the admin page
+        } else {
+            // Check if user already exists
+            const userExists = usersDatabase.some(user => user.username === username);
+
+            if (userExists) {
+                alert('User already exists!');
             } else {
-                alert("Invalid username or password."); // Show error message
+                // Add new user (for demonstration, we're just going to add to the array)
+                usersDatabase.push({ username: username, password: password });
+                alert('User successfully added!');
+                // Optionally, redirect to the login page or clear the form
+                loginForm.reset();
             }
         }
+    });
 
     // Loan Applicants Data
     const applicants = [
